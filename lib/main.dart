@@ -32,10 +32,10 @@ class _RenderTestingHomePageState extends State<RenderTestingHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           CustomText("Welcome to XAM"),
-          SizedBox(
+          /*SizedBox(
             height: 20.0,
-          ),
-          //Padding(padding: EdgeInsets.only(top: 10.0),),
+          ),*/
+          Padding(padding: EdgeInsets.only(top: 20.0),),
           CustomText("One of the best place to work")
         ],
       );
