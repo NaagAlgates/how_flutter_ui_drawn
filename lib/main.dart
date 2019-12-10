@@ -28,7 +28,6 @@ class RenderTestingHomePage extends StatefulWidget {
 
 class _RenderTestingHomePageState extends State<RenderTestingHomePage> {
   var switchText = true;
-
   Widget get welcomeText => Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -36,6 +35,7 @@ class _RenderTestingHomePageState extends State<RenderTestingHomePage> {
           SizedBox(
             height: 20.0,
           ),
+          //Padding(padding: EdgeInsets.only(top: 10.0),),
           CustomText("One of the best place to work")
         ],
       );
@@ -54,6 +54,28 @@ class _RenderTestingHomePageState extends State<RenderTestingHomePage> {
   Widget get showText => Center(
         child: switchText ? welcomeText : locationText,
       );
+
+  @override
+  void didUpdateWidget(RenderTestingHomePage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print("didChangeDependencies");
+  }
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print("didChangeDependencies");
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    print("initState");
+  }
+  @override
+  void dispose() {
+    super.dispose();
+    print("Dispose");
+  }
 
   @override
   Widget build(BuildContext context) {
